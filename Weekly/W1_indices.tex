@@ -1,0 +1,76 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Week 1 %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Powers or indices}
+
+Rules of indices:
+\begin{align}
+	a^{p} \times a^{q} 
+		&= a^{p+q}	
+		\label{eq:indicesR1} 
+		\\
+	a^{p} \div a^{q} 
+		&= a^{p-q} 		
+		\label{eq:indicesR2} 
+		\\
+	(a^{p})^{q} 
+		&= a^{p\times q}		
+		\label{eq:indicesR3} 
+		\\
+	a^{-p} 
+		&= \dfrac{1}{a^{p}} 			
+		\label{eq:indicesR4} 
+		\\
+	a^{0} 
+		&= 1									
+		\label{eq:indicesR5} 
+		\\
+	a^{\frac{1}{p}} 
+		&= \sqrt[p]{a}		
+		\label{eq:indicesR6} 
+		\\
+	a^{\frac{p}{q}} 
+		& = \sqrt[q]{(a^{p})} 
+		\;\; \text{or} \;\; 
+		\left( \sqrt[q]{(a)} \right)^{p}	
+		\label{eq:indicesR7}
+\end{align}
+
+\begin{questions}
+
+\storedata{questionSolutions}{{Tmp Value In Loc 1}}
+
+% \import{\qdir}{M1_indices_q01.tex}
+
+\setcounter{question}{8}
+\import{\qdir}{M1_indices_q09.tex}
+\newpage
+\import{\qdir}{M1_indices_q10.tex}
+
+\ifnum\value{printSols}>0
+	% \newpage
+	\subsubsection*{Numerical solutions}
+	\setcounter{solNo}{2}
+	\begin{enumerate}
+		% \begin{multicols}{3}
+		% 	\item \printSolutionAndInc{} %Q1
+		% 	\item \printSolutionAndInc{} %Q2
+		% 	\item \printSolutionAndInc{} %Q3
+		% 	\item \printSolutionAndInc{} %Q4
+		% 	\item \printSolutionAndInc{} %Q5
+		% 	\item \printSolutionAndInc{} %Q6
+		% 	\item \printSolutionAndInc{} %Q7
+		% 	\item \printSolutionAndInc{} %Q8
+		% \end{multicols}
+		\setcounter{enumi}{8}
+		\begin{multicols}{6}
+			\item \printSolutionAndInc{} %09
+		\end{multicols}
+		\begin{multicols}{6}
+			\item \printSolutionAndInc{} %10
+		\end{multicols}
+	\end{enumerate}
+	\else
+\fi
+
+\end{questions}

@@ -1,0 +1,367 @@
+%% Geometry of circles %%
+% Question 7
+\hlquestion Show that the equation of the tangent at the pont ($x_{1},y_{1}$) 
+on the circle 
+\[ 
+	x^{2} + y^{2} + 2gx + 2fy + c = 0
+\]
+is given by
+\[ 
+	x x_{1} + y y_{1} + g(x + x_{1}) + f(y + y_{1}) + c = 0
+\]
+% \begin{equation}
+%  	x x_{1} + y y_{1} + g(x + x_{1}) + f(y + y_{1}) + c = 0
+% 	\label{eq:M8_circ_q07_tangent}
+% \end{equation}
+
+\begin{solution}
+	\[ 
+		x^{2} + y^{2} + 2gx + 2fy + c = 0
+	\]
+	\[ 
+		\rightarrow
+		(x+g)^{2} + (y+f)^{2} = r^{2} 
+		,\quad
+		\text{where} \;
+		r^{2} = g^{2} + f^{2} - c
+	\]
+	\[
+		\text{centre} \; 
+		( -g, -f )
+		% ,\; 
+		% \text{radius} = 
+		% \sqrt{g^{2} + f^{2} - c}
+	\]
+	\underline{Step 1:} find gradient of tangent to circle at point 
+	($x_{1},y_{1}$)
+	\par
+	\textit{Classic:}
+	\newline
+	For: $(-g, -f) \leftrightarrow (x_{1}, y_{1})$, using: 
+	\[
+		m_{1} = 
+		\frac{y_{1} - y_{2}}{x_{1} - x_{2}}
+		\quad
+		\&
+		\quad
+		m_{1} m_{2} = -1
+	\]
+	\begin{align*}
+		m_{1} 
+			&= 
+			\frac{-f - y_{1}}{-g - x_{1}}
+			\qquad\qquad\qquad
+			\text{or}
+			&
+			m_{1} 
+				&= 
+				\frac{y_{1} + f}{x_{1} + g}
+			\\
+		m_{2} 
+			&= 
+			-\left( \frac{-g - x_{1}}{-f - y_{1}} \right)
+			\qquad
+			&
+			m_{2} 
+				&= 
+				- \left( \frac{x_{1} + g}{y_{1} + f} \right)
+			\\
+		m_{2} 
+			&= 
+			\frac{g + x_{1}}{-f - y_{1}}
+			\qquad
+			&
+			m_{2} 
+				&= 
+				\frac{- x_{1} - g}{y_{1} + f}
+	\end{align*}
+	\textit{Using calculus:} 
+	(BE note: more intuitive, but can't expect students to know\dots)
+	\[ 
+		x^{2} + y^{2} + 2gx + 2fy + c = 0
+	\]
+	Differentiate w.r.t. $x$
+	% \[
+	% 	\rightarrow
+	% 	\frac{d}{dx}\left( x^{2} \right)
+	% 	+
+	% 	\frac{d}{dx}\left( y^{2} \right)
+	% 	+
+	% 	\frac{d}{dx}\left( 2gx \right)
+	% 	+
+	% 	\frac{d}{dx}\left( 2fy \right)
+	% 	+
+	% 	\frac{d}{dx}\left( c \right)
+	% 	= 0
+	% \]
+	% \[
+	% 	\rightarrow
+	% 	2x
+	% 	+
+	% 	2y \frac{dy}{dx}
+	% 	+
+	% 	2g
+	% 	+
+	% 	2f \frac{dy}{dx}
+	% 	= 0		
+	% \]
+	% \[
+	% 	\frac{dy}{dx} (y+f)
+	% 	=
+	% 	-x - g		
+	% \]
+	% \[
+	% 	m_{2}
+	% 	=
+	% 	\frac{dy}{dx} 
+	% 	=
+	% 	\frac{-x - g}{y + f}
+	% \]
+	\begin{align*}
+		\rightarrow
+		\frac{d}{dx}\left( x^{2} \right)
+		+
+		\frac{d}{dx}\left( y^{2} \right)
+		+
+		\frac{d}{dx}\left( 2gx \right)
+			&+
+			\frac{d}{dx}\left( 2fy \right)
+			+
+			\frac{d}{dx}\left( c \right)
+			= 0
+			\\
+		\rightarrow
+		2x
+		+
+		2y \frac{dy}{dx}
+		+
+		2g
+		+
+		2f \frac{dy}{dx}
+			&= 0	
+			\\
+		\frac{dy}{dx} (y+f)
+			&=
+			-x - g
+			\\
+		\frac{dy}{dx} 
+			&=
+			\frac{-x - g}{y + f}
+			\\
+		\therefore
+		m_{2}
+			&=
+			\frac{-(x_{1} + g)}{y_{1} + f}
+	\end{align*}
+	\underline{Step 2:} find equation of tangent to circle at point
+	($x_{1},y_{1}$)
+	\newline
+	\textit{Check*:} 
+	\\
+	Using
+	\[
+		y = m_{2}x + c
+	\]
+	\[
+		\rightarrow
+		y_{1}
+		= 
+		\left( \frac{-(x_{1} + g)}{y_{1} + f} \right)x_{1}
+		+ c
+	\]
+	\begin{align*}
+		\rightarrow
+		c
+			&= 
+			y_{1} 
+			+ 
+			\left( \frac{x_{1}(x_{1} + g)}{y_{1} + f} \right)
+			\\
+		c
+			&= 
+			\frac{
+				\big(
+					y_{1}(y_{1} + f) + x_{1}(x_{1} + g)
+				\big)
+			}{ 
+				(y_{1} + f) 
+			}
+		% 	\\
+		% c
+		% 	&= 
+		% 	\frac{1}{ (y_{1} + f) }
+		% 	\bigg( 
+		% 		y_{1}(y_{1} + f)
+		% 		+
+		% 		x_{1}(x_{1} + g)	
+		% 	\bigg)
+	\end{align*}
+	% \( \therefore \)
+	\[
+		\rightarrow
+		y
+		=
+		\left( \frac{-x (x_{1} + g)}{y_{1} + f} \right)
+		+
+		\left(
+		\frac{
+				y_{1}(y_{1} + f) + x_{1}(x_{1} + g)
+			}{
+				y_{1} + f
+			}
+		\right)
+	\]
+	\[
+		% \rightarrow
+		y (y_{1} + f)
+		=
+		-x (x_{1} + g)
+		+
+		y_{1}(y_{1} + f) 
+		+ 
+		x_{1}(x_{1} + g)
+	\]
+	\[
+		y y_{1} + fy
+		=
+		-x x_{1} - gx
+		+
+		y_{1}^{2} + f y_{1}
+		+ 
+		x_{1}^{2} + g x_{1}
+	\]
+	\begin{equation}
+		y y_{1} + x x_{1}
+		+ fy - f y_{1}
+		+ gx - g x_{1}
+		- x_{1}^{2} 
+		- y_{1}^{2}  
+		= 0
+		\label{eq:M8_circ_q07_expanded_tangent_1}
+	\end{equation}
+	\textit{Alt: }
+	\\
+	Using
+	\[
+		y - y_{1} = m (x - x_{1})
+		% y = m_{2}x + c
+	\]
+	\[
+		\rightarrow
+		y - y_{1}
+		= 
+		\left( \frac{-(x_{1} + g)}{y_{1} + f} \right)
+		(x - x_{1})
+	\]
+	\[
+		(y - y_{1})(y_{1} + f)
+		= 
+		-(x_{1} + g)(x - x_{1})
+	\]
+	\[
+		(y - y_{1})(y_{1} + f)
+		+
+		(x_{1} + g)(x - x_{1})
+		= 0
+	\]
+	% \[
+	% 	y y_{1} - y_{1}^{2} + fy - fy_{1}
+	% 	= 
+	% 	-x x_{1} - gx + x_{1}^{2} + gx_{1}
+	% \]
+	\[
+		y y_{1} - y_{1}^{2} + fy - fy_{1}
+		+ 
+		x x_{1} - x_{1}^{2} + gx - gx_{1}
+		= 0 
+	\]
+	\begin{equation}
+		y y_{1} 
+		+ 
+		x x_{1}  
+		+ fy - fy_{1}
+		+ gx - gx_{1} 
+		- x_{1}^{2}
+		- y_{1}^{2} 
+		= 0 
+		\tag{\ref{eq:M8_circ_q07_expanded_tangent_1}}
+	\end{equation}
+	Don't simplify yet - need the c term!
+	\newline
+	We know that all points on the circle [including ($x_{1},y_{1}$)] satisfy:
+	\begin{align*}
+		x^{2} + y^{2} + 2gx + 2fy + c 
+			&= 0
+			\\
+		\rightarrow
+			x_{1}^{2} + y_{1}^{2} + 2gx_{1} + 2fy_{1} + c 
+			&= 0
+	\end{align*}
+	\begin{equation}
+		x_{1}^{2} + y_{1}^{2} + gx_{1} + fy_{1} 
+		=
+		-gx_{1} -fy_{1} - c
+		\label{eq:M8_circ_q07_rearranged_circle_eq}
+	\end{equation}
+	Rearranging (\ref{eq:M8_circ_q07_expanded_tangent_1})
+	\begin{equation}
+		\rightarrow
+		y y_{1} + x x_{1} + fy + gx 
+		=
+		fy_{1} + gx_{1} + x_{1}^{2} + y_{1}^{2}
+		\label{eq:M8_circ_q07_expanded_tangent_2}
+	\end{equation}
+	We know that all points on circle meet criteria in 
+	(\ref{eq:M8_circ_q07_rearranged_circle_eq})\dots
+	\newline
+	$\rightarrow$ sub (\ref{eq:M8_circ_q07_rearranged_circle_eq})
+	into (\ref{eq:M8_circ_q07_expanded_tangent_2})
+	\[
+		\rightarrow
+		y y_{1} + x x_{1} + fy + gx 
+		=
+		-gx_{1} -fy_{1} - c
+	\]
+	\[
+		\rightarrow
+		y y_{1} 
+		+ 
+		x x_{1} 
+		+ 
+		fy 
+		+ 
+		gx
+		+
+		gx_{1}
+		+ 
+		fy_{1} 
+		+
+		c 
+		= 0
+	\]
+	\[
+		x x_{1} + y y_{1} 
+		+ gx + gx_{1}
+		+ fy + fy_{1} 
+		+ c 
+		= 0
+	\]
+	\[
+		\underline{
+			x x_{1} + y y_{1} 
+			+ g(x + x_{1})
+			+ f(y + y_{1})
+			+ c 
+			= 0
+		}
+	\]
+	Desmos calculator:
+	\url{https://www.desmos.com/calculator/xu8w1xn8ho} 
+	% \qSol{$\therefore$ x = 1}{}
+\end{solution}
+
+\appenddata{questionSolutions}{
+{
+	No solution (proof).
+}
+}

@@ -1,0 +1,204 @@
+% sty file for OV1114 worksheets
+% created on 2021-03-18; BE
+
+%%% change log %%%
+% 2021-09-09 - Updated general worksheet information wording
+% 2023-05-09 - Added siunitx
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{OV1114_WorksheetStyle}
+
+\RequirePackage{amsmath,amssymb,amsfonts}
+\RequirePackage{graphicx}
+\RequirePackage{color,soul} %for hl
+\RequirePackage{siunitx} %for units
+\RequirePackage{multicol} %for multicolumns
+\RequirePackage[hidelinks]{hyperref} %for urls
+\RequirePackage{pgfplots} %for plots
+\RequirePackage[a4paper]{geometry}
+\geometry{
+ a4paper,
+ total={160mm,230mm},
+ left=25mm,
+ top=30mm,
+}
+
+\newif\ifnoSols\noSolsfalse
+\DeclareOption{noSols}{\noSolstrue}
+
+\newif\ifnumSolsPos\numSolsPosfalse
+\DeclareOption{numSolsPos}{\numSolsPostrue}
+
+\newif\ifworkedSols\workedSolsfalse
+\DeclareOption{workedSols}{\workedSolstrue}
+
+\ProcessOptions\relax
+
+\graphicspath{ {../images/} {../figures/} } 
+
+% highlighted questions & parts (to mark questions not in summary booklet)
+\newcommand{\hlquestion}{
+	\let\oldquestionlabel=\questionlabel
+	\renewcommand{\questionlabel}{\hl{\thequestion.}}
+	\question
+	\renewcommand{\questionlabel}{\oldquestionlabel}
+}
+\newcommand{\hlpart}{
+	\let\oldpartlabel=\partlabel
+	\renewcommand{\partlabel}{\hl{(\thepartno)}}
+	\part
+	\renewcommand{\partlabel}{\oldpartlabel}
+}
+
+\newcommand{\qSol}[2]{
+	\begin{center}
+		\hl{#1} #2
+	\end{center}
+}
+\newcommand{\qSolMath}[2]{
+	{%
+    \centering
+	  \colorbox{yellow}{$\displaystyle #1$} #2
+    \\
+  }
+}
+
+\newcounter{printSols}
+\newcounter{printWorkedSols}
+\newcounter{solNo}
+\setcounter{printSols}{0}
+\setcounter{printWorkedSols}{0}
+\setcounter{solNo}{1}
+
+%% Set numerical variables based upon package option
+\ifnoSols
+  \setcounter{printSols}{0}
+\else
+  \setcounter{printSols}{1}
+\fi
+
+\ifworkedSols
+  \setcounter{printWorkedSols}{1} 
+\fi
+
+\renewcommand{\baselinestretch}{1.1}
+
+\newcommand\newpageWorkedSols{%
+  \ifnum \value{printWorkedSols}=1 
+    \newpage 
+  \else
+  \fi
+} 
+
+\newcommand\qdir{../ov1115_questions/}
+\newcommand\gdir{../Weekly/}
+
+%highlighting for questions covered F2F 
+% - bit of a bodge with manual formatting +_-
+\newcommand{\hilight}[1]{\setlength{\fboxsep}{1pt}\colorbox{yellow}{#1}}
+% \newcommand{\hlquestion}{\stepcounter{enumi}\question[\hilight{\theenumi}.]}
+\newcommand{\hliitem}{\stepcounter{enumii}\item[\hilight{(\theenumii)}]}
+
+\renewcommand{\theequation}{\thesubsection.\arabic{equation}}
+
+\ifnum \value{printWorkedSols}=1 
+  \printanswers 
+\fi
+
+\pagestyle{headandfoot}
+\headrule
+\header{%
+  OV1115 - Notes
+  }{}{
+    \today
+  }
+\footer{}{}{\thepage}
+
+\pointsdroppedatright
+\bracketedpoints
+\pointpoints{}{}
+\totalformat{Q\thequestion: \rule{4mm}{0.4pt}/\totalpoints}
+\renewcommand{\questionshook}{%
+    \setlength{\leftmargin}{0pt}%
+    \setlength{\labelwidth}{-\labelsep}%
+    \setlength{\itemsep}{0.8cm}
+}  
+
+%info for storing solutions to print at the end of the document
+%\stepcounter{equation} %commented out with WS7 on 21/09/2021; 
+% uncomment if stuff breaks
+\RequirePackage{xparse}
+
+\ExplSyntaxOn
+\NewDocumentCommand{\storedata}{mm}
+  {
+   \bcp_store_data:nn { #1 } { #2 }
+  }
+
+\NewDocumentCommand{\appenddata}{mm}
+ {
+  \bcp_append_data:nn { #1 } { #2 }
+ }
+
+\NewExpandableDocumentCommand{\getdata}{O{1}m}
+ {
+  \bcp_get_data:nn { #1 } { #2 }
+ }
+
+\NewExpandableDocumentCommand{\getlength}{m}
+ {
+  \seq_count:c { l_bcp_data_#1_seq }
+ }
+
+\NewDocumentCommand{\removelast}{om}
+ {
+  \IfNoValueTF { #1 }
+   {
+    \bcp_remove_last:Nn \l_tmpa_tl { #2 }
+   }
+   {
+    \bcp_remove_last:Nn #1 { #2 }
+   }
+ }
+
+\cs_new_protected:Npn \bcp_store_data:nn #1 #2
+ {
+  % create the sequence if it doesn't exist or clear it if it exists
+  \seq_clear_new:c { l_bcp_data_#1_seq }
+  % append the items
+  \__bcp_append_data:nn { #1 } { #2 }
+ }
+
+\cs_new_protected:Npn \bcp_append_data:nn #1 #2
+ {
+  % create the sequence if it doesn't exist, do nothing if it exists
+  \seq_if_exist:cF { l_bcp_data_#1_seq }
+   { \seq_new:c { l_bcp_data_#1_seq } }
+  % append the items
+  \__bcp_append_data:nn { #1 } { #2 }
+ }
+
+\cs_new_protected:Npn \__bcp_append_data:nn #1 #2
+ {
+  % append items one at a time
+  \tl_map_inline:nn { #2 }
+   {
+    \seq_put_right:cn { l_bcp_data_#1_seq } { ##1 }
+   }
+ }
+
+\cs_new:Npn \bcp_get_data:nn #1 #2
+ {
+  % retrieve the requested item
+  \seq_item:cn { l_bcp_data_#2_seq } { #1 }
+ }
+
+\cs_new_protected:Nn \bcp_remove_last:Nn
+ {
+  \seq_pop_right:cN { l_bcp_data_#2_seq } #1
+ }
+\ExplSyntaxOff
+
+\newcommand\printSolutionAndInc{
+\getdata[\value{solNo}]{questionSolutions} \stepcounter{solNo}
+}
