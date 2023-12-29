@@ -1,0 +1,80 @@
+%% Logarithms %%
+% Question 1
+
+% made custom command to make life easier
+\newcommand{\MathsTwoLogsQOneWkg}[3]{
+	\par
+	$%\displaystyle 
+	#1^{#2} = #3
+	\rightarrow$
+	\colorbox{yellow}{%
+		$\log_{#1}{#3}=#2$%
+	}
+}
+\newcommand{\MathsTwoLogsQOneQs}[3]{
+	$#1^{#2} = #3$
+}
+\newcommand{\MathsTwoLogsQOneSols}[3]{
+	$\log_{#1}{#3}=#2$%
+}
+
+\question Write the following using logarithms instead of powers
+\begin{multicols}{2}
+	\begin{parts}
+		\part \MathsTwoLogsQOneQs{8}{2}{64}
+		\part \MathsTwoLogsQOneQs{3}{5}{243}
+		\part \MathsTwoLogsQOneQs{2}{10}{1024}
+		\part \MathsTwoLogsQOneQs{5}{3}{125}
+		% e-hQs
+		\part \MathsTwoLogsQOneQs{10}{6}{1000000}
+		\part \MathsTwoLogsQOneQs{10}{-3}{0.001}
+		\part \MathsTwoLogsQOneQs{3}{-2}{\frac{1}{9}}
+		\part \MathsTwoLogsQOneQs{6}{0}{1}
+		% i-l
+		\hlpart \MathsTwoLogsQOneQs{5}{-1}{\frac{1}{5}}
+		\hlpart \MathsTwoLogsQOneQs{49}{\frac{1}{2}}{7}
+		\hlpart \MathsTwoLogsQOneQs{27}{\frac{2}{3}}{9}
+		\hlpart \MathsTwoLogsQOneQs{32}{-\frac{2}{5}}{\frac{1}{4}}
+	\end{parts}
+\end{multicols}
+\begin{solution}
+	\begin{multicols}{2}
+		\begin{parts}
+			\part \MathsTwoLogsQOneWkg{8}{2}{64}
+			\part \MathsTwoLogsQOneWkg{3}{5}{243}
+			\part \MathsTwoLogsQOneWkg{2}{10}{1024}
+			\part \MathsTwoLogsQOneWkg{5}{3}{125}
+			% e-h
+			\part \MathsTwoLogsQOneWkg{10}{6}{1000000}
+			\part \MathsTwoLogsQOneWkg{10}{-3}{0.001}
+			\part \MathsTwoLogsQOneWkg{3}{-2}{\frac{1}{9}}
+			\part \MathsTwoLogsQOneWkg{6}{0}{1}
+			% i-l
+			\hlpart \MathsTwoLogsQOneWkg{5}{-1}{\frac{1}{5}}
+			\hlpart \MathsTwoLogsQOneWkg{49}{\frac{1}{2}}{7}
+			\hlpart \MathsTwoLogsQOneWkg{27}{\frac{2}{3}}{9}
+			\hlpart \MathsTwoLogsQOneWkg{32}{-\frac{2}{5}}{\frac{1}{4}}
+		\end{parts}
+	\end{multicols}
+\end{solution}
+
+\appenddata{questionSolutions}{
+{
+\begin{parts}
+	\part \MathsTwoLogsQOneSols{8}{2}{64}
+	\part \MathsTwoLogsQOneSols{3}{5}{243}
+	\part \MathsTwoLogsQOneSols{2}{10}{1024}
+	\part \MathsTwoLogsQOneSols{5}{3}{125}
+	% e-h
+	\part \MathsTwoLogsQOneSols{10}{6}{1000000}
+	\part \MathsTwoLogsQOneSols{10}{-3}{0.001}
+	\part \MathsTwoLogsQOneSols{3}{-2}{\frac{1}{9}}
+	\part \MathsTwoLogsQOneSols{6}{0}{1}
+	% i-l
+	\hlpart \MathsTwoLogsQOneSols{5}{-1}{\frac{1}{5}}
+	\hlpart \MathsTwoLogsQOneSols{49}{\frac{1}{2}}{7}
+	\hlpart \MathsTwoLogsQOneSols{27}{\frac{2}{3}}{9}
+	\hlpart \MathsTwoLogsQOneSols{32}{-\frac{2}{5}}{\frac{1}{4}}
+\end{parts}
+}
+}

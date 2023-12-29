@@ -34,7 +34,7 @@
 
 \ProcessOptions\relax
 
-\graphicspath{ {../images/} {../figures/} } 
+\graphicspath{ {../images/} {../figures/} {../Resources/} } 
 
 % highlighted questions & parts (to mark questions not in summary booklet)
 \newcommand{\hlquestion}{
@@ -97,6 +97,7 @@
 % - bit of a bodge with manual formatting +_-
 \newcommand{\hilight}[1]{\setlength{\fboxsep}{1pt}\colorbox{yellow}{#1}}
 % \newcommand{\hlquestion}{\stepcounter{enumi}\question[\hilight{\theenumi}.]}
+\newcommand{\hlitem}{\stepcounter{enumi}\item[\hilight{(\theenumi)}]}
 \newcommand{\hliitem}{\stepcounter{enumii}\item[\hilight{(\theenumii)}]}
 
 \renewcommand{\theequation}{\thesubsection.\arabic{equation}}

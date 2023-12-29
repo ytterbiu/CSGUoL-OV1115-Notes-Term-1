@@ -1,0 +1,131 @@
+%% Logarithms %%
+% Question 3
+\question Each of the following expressions can be simplified to $\log N$.
+Determine the value of N in each case. 
+We have not explicitly written down the base. 
+You can assume the base is 10, but the results are identical whichever 
+base is used.
+\begin{multicols}{3}
+	\begin{parts}
+		\part $\log3+\log5$
+		\part $\log16 - \log2$
+		\part $3 \log4$
+		% d-f
+		\part $2\log3 - 3\log2$
+		\part $\log236 + \log1$
+		\part $\log236 - \log1$
+		% g-i
+		\hlpart $5\log2 + 2\log5$
+		\hlpart $\log128 - 7\log2$
+		\hlpart $\log2 + \log3 + \log4$
+		% j-l
+		\hlpart $\log12 - 2\log2 + \log3$
+		\hlpart $5\log2 + 4\log3 - 3\log4$
+		\hlpart $\log10 + 2\log3 - \log2$
+	\end{parts}
+\end{multicols}
+\begin{solution}
+	\begin{multicols}{2}
+		\begin{parts}
+			\part $\log3+\log5$
+				\qSol{
+					$\log{15}$
+				}{}
+			\part $\log16 - \log2$
+				\qSol{
+					$\log{8}$
+				}{}
+			\part $3 \log4$
+				\[
+					= \log{4^{3}}
+				\]
+				\qSolMath{
+					\log{64}
+				}{}
+			% d-f
+			\part $2\log3 - 3\log2$
+				\[
+					= \log{ \left( \frac{3^{2}}{2^{3}} \right) }
+				\]
+				\qSolMath{
+					\log{ \left( \frac{9}{8} \right) }
+				}{}
+			\part $\log236 + \log1$
+				\qSol{
+					$\log{236}$
+				}{}
+			\part $\log236 - \log1$
+				\qSol{
+					$\log{236}$
+				}{}
+			% g-i
+			\hlpart $5\log2 + 2\log5$
+				\[
+					= \log{ 2^{5} \times 2^{2} }
+				\]
+				\qSolMath{
+					\log{ 800 }
+				}{}
+			\hlpart $\log128 - 7\log2$
+				\[
+					= \log{ \left( \frac{128}{2^{7}} \right) }
+				\]
+				\qSolMath{
+					\log{ 1 } 
+					\;\;
+					(=0) 
+				}{}
+			\hlpart $\log2 + \log3 + \log4$
+				\qSol{
+					$\log{24}$
+				}{}
+			% j-l
+			\hlpart $\log12 - 2\log2 + \log3$
+				\[
+					= \log{ \left( \frac{12 \times 3}{2^{2}} \right) }
+				\]
+				\qSolMath{
+					\log{ 9 } 
+				}{}
+			\hlpart $5\log2 + 4\log3 - 3\log4$
+				\[
+					= \log{ \left( \frac{2^{5} \times 3^{4}}{ 4^{3}} \right) }
+				\]
+				\[
+					= \log{ \left( \frac{2^{5} \times 3^{4}}{ 2^{6}} \right) }
+				\]
+				\qSolMath{
+					\log{ \left( \frac{81}{2} \right) } 
+				}{}
+			\hlpart $\log10 + 2\log3 - \log2$
+				\[
+					= \log{ \left( \frac{10 \times 3^{2}}{2} \right) }
+				\]
+				\qSolMath{
+					\log{ 45 } 
+				}{}
+		\end{parts}
+	\end{multicols}
+\end{solution}
+
+\appenddata{questionSolutions}{
+{
+\begin{parts}
+	\part $15$
+	\part $8$
+	\part $64$
+	% d-f
+	\part $\frac{9}{8}$
+	\part $236$
+	\part $236$
+	% g-i
+	\hlpart $800$
+	\hlpart $1$
+	\hlpart $24$
+	% j-l
+	\hlpart $9$
+	\hlpart $\frac{81}{2}$
+	\hlpart $45$
+\end{parts}
+}
+}
