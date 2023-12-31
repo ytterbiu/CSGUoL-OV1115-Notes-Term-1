@@ -1,0 +1,46 @@
+\subsection{Radians}
+
+\ifnum \value{printWorkedSols}=1 
+
+Exercises 1 \& 2 are simple calculations 
+(using Eq.~\ref{eq:circleArcLength}) 
+or degrees $\leftrightarrow$ radians conversions
+\begin{equation}
+	s = r\theta
+	\label{eq:circleArcLength}
+\end{equation}
+where $s$ is the arc length, 
+$r$ is the radius of the circle, 
+and $\theta$ is the angle in radians.
+
+\begin{equation}
+	A = \frac{1}{2} r^{2} \theta
+	\label{eq:circleSectorArea}
+\end{equation}
+where $A$ is the area of a sector in a circle, 
+$r$ is the radius of the circle, 
+and $\theta$ is the angle in radians.
+
+\fi
+
+\subsubsection{Exercise 3}
+\begin{questions}
+
+\storedata{questionSolutions}{{Tmp Value In Loc 1}}
+\import{\qdir}{M7_radians_ex03.tex}
+
+\ifnum\value{printSols}>0
+	% \newpage
+	\subsubsection*{Numerical solutions}
+	\setcounter{solNo}{2}
+	\begin{enumerate}
+		\begin{multicols}{3}
+			\item \printSolutionAndInc{} %Q1
+			% \item \printSolutionAndInc{} %Q2
+			% \item \printSolutionAndInc{} %Q3
+		\end{multicols}
+	\end{enumerate}
+	\else
+\fi
+
+\end{questions}
