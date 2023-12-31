@@ -1,0 +1,31 @@
+\subsection{Equations of straight lines}
+
+\begin{questions}
+
+\storedata{questionSolutions}{{Tmp Value In Loc 1}}
+\import{\qdir}{M8_lines_q01.tex}
+\import{\qdir}{M8_lines_q02.tex}
+\import{\qdir}{M8_lines_q03.tex}
+\import{\qdir}{M8_lines_q04.tex}
+\import{\qdir}{M8_lines_q05.tex}
+	% \newpageWorkedSols{}
+
+\ifnum\value{printSols}>0
+	% \newpage
+	\subsubsection*{Numerical solutions}
+	\setcounter{solNo}{2}
+	\begin{enumerate}
+		\item \printSolutionAndInc{} %Q1
+		\begin{multicols}{3}
+			\item \printSolutionAndInc{} %Q2
+			\item \printSolutionAndInc{} %Q3
+			\item \printSolutionAndInc{} %Q4
+		\end{multicols}
+		\begin{multicols}{2}
+			\item \printSolutionAndInc{} %Q5
+		\end{multicols}
+	\end{enumerate}
+	\else
+\fi
+
+\end{questions}

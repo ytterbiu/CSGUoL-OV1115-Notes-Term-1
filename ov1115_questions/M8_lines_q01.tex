@@ -1,0 +1,88 @@
+%% Equations of straight lines %%
+% Question 1
+\newcommand\printIfWorkedSols[1]{%
+  \ifnum \value{printWorkedSols}=1 
+    \color{red}{#1}
+  \else
+  \fi
+}
+\question Determine the gradient and y-intercept for each of the straight 
+lines in the table below.
+\begin{table}[h]
+	\begin{tabular}{lcc}
+		\toprule
+		Equation       
+			& Gradient 
+			& y-intercept 
+			\\  \midrule
+		$y = 3x + 2  $ 
+			& \printIfWorkedSols{3}       
+			& \printIfWorkedSols{2}            
+			\\ %\midrule
+		$y = 5x - 2  $ 
+			& \printIfWorkedSols{5}       
+			& \printIfWorkedSols{-2}            
+			\\ %\midrule
+		$y = -2x + 4 $ 
+			& \printIfWorkedSols{-2}      
+			& \printIfWorkedSols{4}            
+			\\ %\midrule
+		$y = 12x     $ 
+			& \printIfWorkedSols{12}         
+			& \printIfWorkedSols{0}            
+			\\ %\midrule
+		$y=\frac{1}{2}x - \frac{2}{3}$ 
+			& \printIfWorkedSols{$\frac{1}{2}$}         
+			& \printIfWorkedSols{$-\frac{2}{3}$}            
+			\\ %\midrule
+		$2y - 10x = 8$ 
+			& \printIfWorkedSols{5}         
+			& \printIfWorkedSols{4}            
+			\\ %\midrule
+		$x+y+1=0     $ 
+			& \printIfWorkedSols{-1}         
+			& \printIfWorkedSols{-1}           
+			\\
+		\bottomrule
+	\end{tabular}
+\end{table}
+\appenddata{questionSolutions}{
+{
+\begin{tabular}{lcc}
+	\toprule
+	Equation       
+		& Gradient 
+		& y-intercept 
+		\\  \midrule
+	$y = 3x + 2  $ 
+		&  3       
+		&  2           
+		\\ %\midrule
+	$y = 5x - 2  $ 
+		&  5       
+		&  -2           
+		\\ %\midrule
+	$y = -2x + 4 $ 
+		&  -2      
+		&  4           
+		\\ %\midrule
+	$y = 12x     $ 
+		&  12        
+		&  0           
+		\\ %\midrule
+	$y=\frac{1}{2}x - \frac{2}{3}$ 
+		&  $\frac{1}{2}$        
+		&  $-\frac{2}{3}$           
+		\\ %\midrule
+	$2y - 10x = 8$ 
+		& 5         
+		& 4            
+		\\ %\midrule
+	$x+y+1=0     $ 
+		&  -1        
+		&  -1          
+		\\
+	\bottomrule
+\end{tabular}
+}
+}

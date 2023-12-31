@@ -15,6 +15,7 @@
 \RequirePackage{multicol} %for multicolumns
 \RequirePackage[hidelinks]{hyperref} %for urls
 \RequirePackage{pgfplots} %for plots
+\RequirePackage{booktabs}
 \RequirePackage[a4paper]{geometry}
 \geometry{
  a4paper,
@@ -88,7 +89,8 @@
     \newpage 
   \else
   \fi
-} 
+}
+
 
 \newcommand\qdir{../ov1115_questions/}
 \newcommand\gdir{../Weekly/}
@@ -97,7 +99,7 @@
 % - bit of a bodge with manual formatting +_-
 \newcommand{\hilight}[1]{\setlength{\fboxsep}{1pt}\colorbox{yellow}{#1}}
 % \newcommand{\hlquestion}{\stepcounter{enumi}\question[\hilight{\theenumi}.]}
-\newcommand{\hlitem}{\stepcounter{enumi}\item[\hilight{(\theenumi)}]}
+\newcommand{\hlitem}{\stepcounter{enumi}\item[\hilight{\theenumi.}]}
 \newcommand{\hliitem}{\stepcounter{enumii}\item[\hilight{(\theenumii)}]}
 
 \renewcommand{\theequation}{\thesubsection.\arabic{equation}}

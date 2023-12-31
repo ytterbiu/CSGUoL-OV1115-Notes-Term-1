@@ -8,115 +8,119 @@
 % questions
 \subsection{Logarithms}
 
-\subsubsection{Quick proof {--} laws of logs}
+\ifnum \value{printWorkedSols}=1 
 
-\textit{%
-	BE note: have included a cut-out from my old notes below,
-	but quick proofs of the four laws of logs are included here first\dots
-}
-\subsubsection*{Laws of logs}
-\begin{align}
-	\log_{\textcolor{red}a}{b} + \log_{\textcolor{red}a}{c} 
-		&= \log_{\textcolor{red}a}{bc} 
-		\label{eq:log_law_1}
-		\\
-	\log{b} - \log{c} 
-		&= \log{\left( \frac{b}{c} \right)} 
-		\label{eq:log_law_2}
-		\\
-	n \log{b}
-		&= \log{b^{n}} 
-		\label{eq:log_law_3}
-		\\
-	\log_{a}{b}
-		&= \frac{\log_{\textcolor{green}x}{b}}{\log_{\textcolor{green}x}{a}}
-		\label{eq:log_law_4}
-\end{align}
-\subsubsection*{Proof of Law 1}
-Let $b=a^{x}$ and $c=a^{y}$
-\newline
-Or $\log_{a}{b} = x$ and $\log_{a}{c} = y$
-(if we rewrite the first statements as logs\dots)
-\begin{align*}
-	bc 
-		&= a^{x+y}
-		\\
-	\log_{a}{bc} 
-		&= x + y
-		\\
-	\rightarrow
-	\log_{a}{bc} 
-		&= \log_{a}{b} + \log_{a}{c}
-		\tag{\ref{eq:log_law_1} revisited}
-\end{align*}
-\subsubsection*{Proof of Law 2}
-\begin{align*}
-	\frac{b}{c} 
-		&= a^{x-y}
-		\\
-	\log_{a}{\left( \frac{b}{c} \right)} 
-		&= x - y
-		\\
-	\rightarrow
-	\log_{a}{\left( \frac{b}{c} \right)}
-		&= \log_{a}{b} - \log_{a}{c}
-		\tag{\ref{eq:log_law_2} revisited}
-\end{align*}
-\subsubsection*{Proof of Law 3}
-Let $b=a^{x} \rightarrow \log_{a}{b} = x$
-\begin{align*}
-	(b)^{n}
-		&= \left( a^{x} \right)^{n}
-		\\
-	b^{n}
-		&= a^{xn}
-		\\
-	\log_{a}{\left( b^{n} \right)}
-		&= (x)(n)
-		\\
-	\log_{a}{\left( b^{n} \right)}
-		&= (\log_{a}{b})(n)
-		\\
-	\rightarrow
-	\log_{a}{b^{n}}
-		&= n \log_{a}{b}
-		\tag{\ref{eq:log_law_3} revisited}
-\end{align*}
-\subsubsection*{Proof of Law 4}
-Let $b = a^{k} \rightarrow k = \log_{a}{b}$
-\newline
-Take logs of both sides with a different base, 
-$\textcolor{green}x$, 
-where $\textcolor{green}{x}>0$ \& $\textcolor{green}{x} \neq 1$
-\begin{align*}
-	\log_{\textcolor{green}x}{b} 
-		&= \log_{\textcolor{green}x}{\left( a^{k} \right)} 
-		\\
-	\log_{\textcolor{green}x}{b} 
-		&= k \cdot \log_{\textcolor{green}x}{\left( a \right)}
-		\\
-	k 
-		&= \frac{\log_{\textcolor{green}x}{b}}{\log_{\textcolor{green}x}{a}}
-		\\
-	\rightarrow
-	\log_{a}{b}
-		&= \frac{\log_{\textcolor{green}x}{b}}{\log_{\textcolor{green}x}{a}}
-		\tag{\ref{eq:log_law_4} revisited}
-\end{align*}
+	\subsubsection{Quick proof {--} laws of logs}
 
-% BE: Log notes
-\includepdf[
-	pages={224-242},
-	scale=0.99, 
-	frame=true,
-	pagecommand={\thispagestyle{plain}},
-	addtotoc={
-		224,subsubsection,1,BE Log Notes,BEMathsNotesLogs%,
-		% 230,subsubsection,1,Proof of Log Law 1 in BE Notes,BEMathsNotesLogs
-	},
-]{ALL_C1-C4_NOTES.pdf}
+	\textit{%
+		BE note: have included a cut-out from my old notes below,
+		but quick proofs of the four laws of logs are included here first\dots
+	}
+	\subsubsection*{Laws of logs}
+	\begin{align}
+		\log_{\textcolor{red}a}{b} + \log_{\textcolor{red}a}{c} 
+			&= \log_{\textcolor{red}a}{bc} 
+			\label{eq:log_law_1}
+			\\
+		\log{b} - \log{c} 
+			&= \log{\left( \frac{b}{c} \right)} 
+			\label{eq:log_law_2}
+			\\
+		n \log{b}
+			&= \log{b^{n}} 
+			\label{eq:log_law_3}
+			\\
+		\log_{a}{b}
+			&= \frac{\log_{\textcolor{green}x}{b}}{\log_{\textcolor{green}x}{a}}
+			\label{eq:log_law_4}
+	\end{align}
+	\subsubsection*{Proof of Law 1}
+	Let $b=a^{x}$ and $c=a^{y}$
+	\newline
+	Or $\log_{a}{b} = x$ and $\log_{a}{c} = y$
+	(if we rewrite the first statements as logs\dots)
+	\begin{align*}
+		bc 
+			&= a^{x+y}
+			\\
+		\log_{a}{bc} 
+			&= x + y
+			\\
+		\rightarrow
+		\log_{a}{bc} 
+			&= \log_{a}{b} + \log_{a}{c}
+			\tag{\ref{eq:log_law_1} revisited}
+	\end{align*}
+	\subsubsection*{Proof of Law 2}
+	\begin{align*}
+		\frac{b}{c} 
+			&= a^{x-y}
+			\\
+		\log_{a}{\left( \frac{b}{c} \right)} 
+			&= x - y
+			\\
+		\rightarrow
+		\log_{a}{\left( \frac{b}{c} \right)}
+			&= \log_{a}{b} - \log_{a}{c}
+			\tag{\ref{eq:log_law_2} revisited}
+	\end{align*}
+	\subsubsection*{Proof of Law 3}
+	Let $b=a^{x} \rightarrow \log_{a}{b} = x$
+	\begin{align*}
+		(b)^{n}
+			&= \left( a^{x} \right)^{n}
+			\\
+		b^{n}
+			&= a^{xn}
+			\\
+		\log_{a}{\left( b^{n} \right)}
+			&= (x)(n)
+			\\
+		\log_{a}{\left( b^{n} \right)}
+			&= (\log_{a}{b})(n)
+			\\
+		\rightarrow
+		\log_{a}{b^{n}}
+			&= n \log_{a}{b}
+			\tag{\ref{eq:log_law_3} revisited}
+	\end{align*}
+	\subsubsection*{Proof of Law 4}
+	Let $b = a^{k} \rightarrow k = \log_{a}{b}$
+	\newline
+	Take logs of both sides with a different base, 
+	$\textcolor{green}x$, 
+	where $\textcolor{green}{x}>0$ \& $\textcolor{green}{x} \neq 1$
+	\begin{align*}
+		\log_{\textcolor{green}x}{b} 
+			&= \log_{\textcolor{green}x}{\left( a^{k} \right)} 
+			\\
+		\log_{\textcolor{green}x}{b} 
+			&= k \cdot \log_{\textcolor{green}x}{\left( a \right)}
+			\\
+		k 
+			&= \frac{\log_{\textcolor{green}x}{b}}{\log_{\textcolor{green}x}{a}}
+			\\
+		\rightarrow
+		\log_{a}{b}
+			&= \frac{\log_{\textcolor{green}x}{b}}{\log_{\textcolor{green}x}{a}}
+			\tag{\ref{eq:log_law_4} revisited}
+	\end{align*}
 
-\subsubsection{OV1115 Logarithm questions}
+	% BE: Log notes
+	\includepdf[
+		pages={224-242},
+		scale=0.99, 
+		frame=true,
+		pagecommand={\thispagestyle{plain}},
+		addtotoc={
+			224,subsubsection,1,BE Log Notes,BEMathsNotesLogs%,
+			% 230,subsubsection,1,Proof of Log Law 1 in BE Notes,BEMathsNotesLogs
+		},
+	]{ALL_C1-C4_NOTES.pdf}
+
+	\subsubsection{OV1115 Logarithm questions}
+\else
+\fi
 \begin{questions}
 
 \storedata{questionSolutions}{{Tmp Value In Loc 1}}
