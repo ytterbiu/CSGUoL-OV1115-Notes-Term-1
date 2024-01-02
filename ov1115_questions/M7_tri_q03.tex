@@ -1,0 +1,162 @@
+%% Triangle Formulae %%
+% Exercise 2 - Q01
+\question Find the lengths of the other two sides (to 3 decimal places) of the 
+triangles with
+\begin{multicols}{3}
+	\begin{parts}
+		\part $a=2$, $A$=$30^{\circ}$, $B$=$40^{\circ}$
+		\part $b=5$, $B$=$45^{\circ}$, $C$=$60^{\circ}$
+		\part $c=3$, $A$=$37^{\circ}$, $B$=$54^{\circ}$
+	\end{parts}
+\end{multicols}
+\begin{solution}
+	\[
+		\frac{a}{\sin{A}}
+		=
+		\frac{b}{\sin{B}}
+		=
+		\frac{c}{\sin{C}}
+	\]
+	\begin{parts}
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		%% Part a %%
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\part $a=2$, $A=30^{\circ}$, $B=40^{\circ}$
+		\[
+			\rightarrow
+			C = 180 - (30+40) = 110^{\circ}
+		\]
+		\[
+			\frac{a}{\sin{A}} 
+			=
+			\frac{2}{\sin{30}}
+			= 
+			4 
+		\]
+		\vspace{-1\baselineskip}
+		\begin{multicols}{2}
+			\noindent
+			\begin{align*}
+				b 
+					&= \left( \sin{B} \right) \left( \frac{a}{\sin{A}} \right)
+					\\
+				b 
+					&= 4\sin{40^{\circ}}
+					\\
+				b 
+					&= 2.571150\ldots
+			\end{align*}
+			\begin{align*}
+				c 
+					&= \left( \sin{C} \right) \left( \frac{a}{\sin{A}} \right)
+					\\
+				c 
+					&= 4\sin{110^{\circ}}
+					\\
+				c 
+					&= 3.758770\ldots
+			\end{align*}
+		\end{multicols}
+		\qSolMath{
+			b = 2.571, 
+			\quad
+			c = 3.759
+		}{
+			(both to 3dp)
+		}
+		
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		%% Part b %%
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\part $b=5$, $B=45^{\circ}$, $C=60^{\circ}$
+		\[
+			\rightarrow
+			A = 180 - (45+60) = 75^{\circ}
+		\]
+		\[
+			\frac{b}{\sin{B}} 
+			=
+			\frac{5}{\sin{45}}
+			= 
+			5\sqrt{2} 
+		\]
+		\vspace{-1\baselineskip}
+		\begin{multicols}{2}
+			\noindent
+			\begin{align*}
+				a 
+					&= 5\sqrt{2} \sin{75^{\circ}}
+					\\
+				a 
+					&= 6.830127\ldots
+			\end{align*}
+			\begin{align*}
+				c 
+					&= 5\sqrt{2} \sin{60^{\circ}}
+					\\
+				c 
+					&= 6.123724\ldots
+			\end{align*}
+		\end{multicols}
+		\qSolMath{
+			a = 6.830, 
+			\quad
+			c = 6.124
+		}{
+			(both to 3dp)
+		}
+
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		%% Part c %%
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\part $c=3$, $A=37^{\circ}$, $B=54^{\circ}$
+		\[
+			\rightarrow
+			C = 180 - (37+54) = 89^{\circ}
+		\]
+		\[
+			\frac{c}{\sin{C}} 
+			=
+			\frac{3}{\sin{89}}
+		\]
+		% =3/(sin(89*pi/180))
+		\vspace{-1\baselineskip}
+		\begin{multicols}{2}
+			\noindent
+			\begin{align*}
+				a 
+					&= \left( \frac{3}{\sin{89^{\circ}}} \right) 
+					(\sin{37^{\circ}})
+					\\
+				a 
+					&= 1.805720\ldots
+			\end{align*}
+			\begin{align*}
+				c 
+					&= \left( \frac{3}{\sin{89^{\circ}}} \right) 
+					(\sin{54^{\circ}})
+					\\
+				c 
+					&= 2.427420\ldots
+			\end{align*}
+		\end{multicols}
+		\qSolMath{
+			a = 1.806, 
+			\quad
+			c = 2.427
+		}{
+			(both to 3dp)
+		}
+
+	\end{parts}
+\end{solution}
+
+\appenddata{questionSolutions}{
+{
+\begin{parts}
+	\part $b = 2.571$, $c = 3.759$ (both to 3dp)
+	\part \hl{$a = 6.830$}, $c = 6.124$ (both to 3dp)
+	\part $a = 1.806$, $c = 2.427$ (both to 3dp)
+\end{parts}
+}
+}

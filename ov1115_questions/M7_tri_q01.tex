@@ -1,0 +1,179 @@
+%% Triangle Formulae %%
+% Exercise 1 - Q01
+\question Find the length of the third side, to 3 decimal places, 
+and the other two angles, to 1 decimal place, in the following triangles
+\label{q:triangle_formulae_q01}
+\begin{multicols}{3}
+	\begin{parts}
+		\part $a=1,\, 	b=2,\, 		C=30^{\circ}$
+		\part $a=3,\, 	c=4,\, 		B=50^{\circ}$
+		\part $b=5,\, 	c=10,\, 	A=30^{\circ}$
+	\end{parts}
+\end{multicols}
+\begin{solution}
+	\begin{parts}
+		\part $a=1,\, 	b=2,\, 		C=30^{\circ}$
+		\begin{multicols}{2}
+			\begin{align*}
+				c^{2} 
+					&= a^{2} + b^{2} - 2ab \cos{C}
+					\\
+				c^{2} 
+					&= (1)^{2} + (2)^{2} - 2(1)(2) \cos{30^{\circ}}
+					\\
+				c 
+					&= \sqrt{5 - 2\sqrt{3}}
+					\\
+				c 
+					&= 1.239313\ldots
+			\end{align*}
+			\vspace{-\baselineskip}
+			\begin{align*}
+				\cos{A} 
+					&= \frac{b^{2} + c^{2} - a^{2}}{2bc}
+					\\
+				A 
+					&= \cos^{-1}
+					\left( 
+						\frac
+						{4 + 5-2\sqrt{3} - 1}
+						{2(2) \left(\sqrt{5 - 2\sqrt{3}}\right) } 
+					\right)
+					\\
+				A 
+					&= 23.79397\ldots ^{\circ}
+					\\
+				B 
+					&= 180^{\circ} - C - A
+					\\
+					&= 180^{\circ} - 30^{\circ} - 23.79397\ldots
+					\\
+				B
+					&= 126.206\ldots ^{\circ}
+			\end{align*}
+		\end{multicols}
+		\qSolMath{
+			c = 1.239 \; \text{(3dp)}
+			\quad
+			A = 23.8^{\circ} \; \text{(1dp)}
+			\quad
+			B = 126.2^{\circ} \; \text{(1dp)}
+		}{}
+
+		\part $a=3,\, 	c=4,\, 		B=50^{\circ}$
+		\begin{multicols}{2}
+			\begin{align*}
+				b^{2} 
+					&= a^{2} + c^{2} - 2ac \cos{B}
+					\\
+				b^{2} 
+					&= (3)^{2} + (4)^{2} - 2(3)(4) \cos{50^{\circ}}
+					\\
+				b^{2}
+					&= 9.573097\ldots
+					\\
+				b 
+					&= 3.094042\ldots
+			\end{align*}
+			\vspace{-\baselineskip}
+			\begin{align*}
+				\cos{A} 
+					&= \frac{b^{2} + c^{2} - a^{2}}{2bc}
+					\\
+				A 
+					&= \cos^{-1}
+					\left( 
+						\frac{9.573097\ldots + 16 - 9}
+						{(2)(3.094042\ldots)(4)}
+					\right)
+					\\
+				A 
+					&= \cos^{-1}\left( 0.66955689\ldots \right)
+					\\
+				A 
+					&= 47.96712\ldots ^{\circ}
+					\\
+				B 
+					&= 180^{\circ} - C - A
+					\\
+					&= 180^{\circ} - 50^{\circ} - 47.96712\ldots
+					\\
+				B
+					&= 82.03287\ldots ^{\circ}
+			\end{align*}
+		\end{multicols}
+		\qSolMath{
+			b = 3.094 \; \text{(3dp)}
+			\quad
+			A = 48.0^{\circ} \; \text{(1dp)}
+			\quad
+			B = 82.0^{\circ} \; \text{(1dp)}
+		}{}
+
+		\part $b=5,\, 	c=10,\, 	A=30^{\circ}$
+		\par
+		Similar triangle to part (a) $\therefore$ angles will be the same\dots
+		\begin{multicols}{2}
+			\begin{align*}
+				a^{2} 
+					&= b^{2} + c^{2} - 2bc \cos{B}
+					\\
+				a^{2} 
+					&= (5)^{2} + (10)^{2} - 2(5)(10) \cos{30^{\circ}}
+					\\
+				a^{2} 
+					&= 125 - 100 \left( \frac{\sqrt{3}}{2} \right)
+					\\
+				a^{2}
+					&= 38.397459\ldots
+					\\
+				a 
+					&= 6.1965683\ldots
+			\end{align*}
+			\vspace{-\baselineskip}
+			\begin{align*}
+				\cos{B} 
+					&= \frac{a^{2} + c^{2} - b^{2}}{2ac}
+					\\
+				B 
+					&= \cos^{-1}
+					\left( 
+						\frac{38.39745\ldots + 75}
+						{(2)(6.196568\ldots)(10)}
+					\right)
+					\\
+				B 
+					&= \cos^{-1}\left( 0.915002\ldots \right)
+					\\
+				B 
+					&= 23.79397\ldots ^{\circ}
+					\\
+				C 
+					&= 180^{\circ} - A - B
+					\\
+					&= 180^{\circ} - 30^{\circ} - 23.79397\ldots
+					\\
+				C
+					&= 126.20602\ldots ^{\circ}
+			\end{align*}
+		\end{multicols}
+		\qSolMath{
+			a = 6.197 \; \text{(3dp)}
+			\quad
+			B = 23.8^{\circ} \; \text{(1dp)}
+			\quad
+			C = 126.2^{\circ} \; \text{(1dp)}
+		}{}
+
+	\end{parts}
+\end{solution}
+
+\appenddata{questionSolutions}{
+{
+\begin{parts}
+	\part $c = 1.239$ (3dp), $A = 23.8^{\circ}$ (1dp), $B = 126.2^{\circ}$ (1dp)
+	\part $b = 3.094$ (3dp), $A = 48.0^{\circ}$ (1dp), $B = 82.0^{\circ}$ (1dp)
+	\part $a = 6.197$ (3dp), $B = 23.8^{\circ}$ (1dp), $C = 126.2^{\circ}$ (1dp)
+\end{parts}
+}
+}

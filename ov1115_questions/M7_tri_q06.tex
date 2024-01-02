@@ -1,0 +1,109 @@
+%% Triangle Formulae %%
+% Exercise 3 - Q02
+\question Find the areas of each of the triangles (to 3 decimal places) in 
+\ref{subsec:triangle_formulae}, Question \ref{q:triangle_formulae_q02}.
+
+BE note: from \ref{subsec:triangle_formulae} Q\ref{q:triangle_formulae_q02}:
+\begin{multicols}{3}
+	\begin{parts}
+		\part $a=2$, $b=3$, $c=4$
+		\part $a=1$, $b=1$, $c=1.5$
+		\part $a=2$, $b=2$, $c=3$
+	\end{parts}
+\end{multicols}
+\begin{solution}
+	\[
+		\text{area} \; [\alpha] 
+		= 
+		\sqrt{s(s-a)(s-b)(s-c)}
+	\]
+	\[
+		s = \frac{a+b+c}{2}
+	\]
+	\begin{parts}
+		\part $a=2$, $b=3$, $c=4$
+		\[
+			s = \frac{2+3+4}{2} 
+			= \frac{9}{2}
+		\]
+		\[
+			\alpha 
+			= 
+			\sqrt{
+				\tfrac{9}{2}
+				\left(\tfrac{9}{2}-2\right)
+				\left(\tfrac{9}{2}-3\right)
+				\left(\tfrac{9}{2}-4\right)
+			}
+		\]
+		\[
+			\alpha = \frac{3\sqrt{15}}{4}
+			= 2.9047375\ldots
+		\]
+		\qSolMath{
+			2.905 \; \text{units}^{2}
+		}{
+			(3dp)
+		}
+		
+		\part $a=1$, $b=1$, $c=1.5$
+		\[
+			s = \frac{1+1+1.5}{2} 
+			= \frac{7}{4}
+		\]
+		\[
+			\alpha 
+			= 
+			\sqrt{
+				\tfrac{7}{4}
+				\left(\tfrac{7}{4}-1\right)
+				\left(\tfrac{7}{4}-1\right)
+				\left(\tfrac{7}{4}-1.5\right)
+			}
+		\]
+		\[
+			\alpha = 0.49607837\ldots
+		\]
+		\qSolMath{
+			0.496 \; \text{units}^{2}
+		}{
+			(3dp)
+		}
+		
+		\part $a=2$, $b=2$, $c=3$
+		\[
+			s = \frac{2+2+3}{2} 
+			= \frac{7}{2}
+		\]
+		\[
+			\alpha 
+			= 
+			\sqrt{
+				\tfrac{7}{2}
+				\left(\tfrac{7}{2}-2\right)
+				\left(\tfrac{7}{2}-2\right)
+				\left(\tfrac{7}{2}-3\right)
+			}
+		\]
+		\[
+			\alpha = \frac{3\sqrt{7}}{4}
+			= 1.9843134\ldots
+		\]
+		\qSolMath{
+			1.984 \; \text{units}^{2}
+		}{
+			(3dp)
+		}
+	
+	\end{parts}
+\end{solution}
+
+\appenddata{questionSolutions}{
+{
+\begin{parts}
+	\part $2.905 \; \text{units}^{2}$
+	\part $0.496 \; \text{units}^{2}$
+	\part $1.984 \; \text{units}^{2}$
+\end{parts}
+}
+}

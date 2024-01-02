@@ -1,0 +1,542 @@
+%% Triangle Formulae %%
+% Exercise 4 - Q01
+\setlength{\columnseprule}{0.5pt}
+\def\columnseprulecolor{\color{blue}}
+\question Determine the lengths of all the sides (to 3 decimal places), 
+the sizes of all the angles (to 1 decimal place) 
+and the area (to 3 decimal places) of each of the following triangles.
+\begin{parts}
+	\part $a=5$, $b=3$, $c=6$
+	\part $a=5$, $b=2$, $C=42^{\circ}$
+	\part $c=3$, $A=40^{\circ}$, $B=60^{\circ}$ 
+	\part $b=2$, $A=73^{\circ}$, $B=41^{\circ}$ 
+	\part $a=5$, $b=3$, $c=4 $
+	\part $c=2$, $b=5$, $B=78^{\circ}$
+\end{parts}
+\begin{solution}
+	\begin{align*}
+		\cos{A} 
+			&= \frac{b^{2} + c^{2} - a^{2}}{2bc} 
+			\\
+		c^{2} 
+			&= a^{2} + b^{2} - 2ab \cos{C} 
+			\\
+		\frac{a}{\sin{A}} 
+			&= \frac{b}{\sin{B}} =	\frac{c}{\sin{C}}  
+			\\
+		\text{area} 
+			&= \frac{1}{2}a \cdot b \sin{C}
+			\\
+		\text{area} 
+			&= \sqrt{s(s-a)(s-b)(s-c)}
+			\\
+		s
+			&= \frac{a+b+c}{2}
+	\end{align*}
+	\begin{parts}
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		%% Part a %%
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\part $a=5$, $b=3$, $c=6$
+		\begin{multicols}{3}
+			\noindent
+			\begin{align*}
+				% =acos((9+36-25)/(2*3*6))*180/pi
+				\cos{A} 
+					&= \frac{b^{2} + c^{2} - a^{2}}{2bc}
+					\\
+				\cos{A} 
+					&= \frac{3^{2} + 6^{2} - 5^{2}}{2(3)(6)}
+					\\
+				A 
+					&= \cos^{-1} \left( \frac{5}{9} \right)
+					\\
+				A
+					&= 56.25101\ldots ^{\circ}
+			\end{align*}
+			\begin{align*}
+				% =acos(13/15)*180/pi
+				\cos{B} 
+					&= \frac{a^{2} + c^{2} - b^{2}}{2ac}
+					\\
+				\cos{B} 
+					&= \frac{5^{2} + 6^{2} - 3^{2}}{2(5)(6)}
+					\\
+				B 
+					&= \cos^{-1} \left( \frac{13}{15} \right)
+					\\
+				B
+					&= 29.92643\ldots ^{\circ}
+			\end{align*}
+			\begin{align*}
+				% =acos(-1/15)*180/pi
+				\cos{C} 
+					&= \frac{a^{2} + b^{2} - c^{2}}{2ab}
+					\\
+				\cos{C} 
+					&= \frac{5^{2} + 3^{2} - 6^{2}}{2(5)(3)}
+					\\
+				C 
+					&= \cos^{-1} \left( -\frac{1}{15} \right)
+					\\
+				C
+					&= 93.822553\ldots ^{\circ}
+			\end{align*}
+		\end{multicols}
+		\begin{multicols}{2}
+			\noindent
+			\[
+				s = \frac{a+b+c}{2}
+			\]
+			\[
+				s = \frac{14}{2} = 7
+			\]
+			\[
+				\text{area} 
+				= \sqrt{7(7-5)(7-3)(7-6)}
+				= \sqrt{56}
+			\]
+			\[
+				\text{area} = 7.483314\ldots \; \text{units}^{2}
+			\]
+		\end{multicols}
+		\qSolMath{
+			A = 56.3 ^{\circ},
+			\quad
+			B = 29.9 ^{\circ},
+			\quad
+			C = 93.8 ^{\circ}
+		}{
+			(1dp)
+		}
+		\qSolMath{
+			\text{area} = 7.483 \; \text{units}^{2}
+		}{
+			(3dp)
+		}
+
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		%% Part b %%
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\part $a=5$, $b=2$, $C=42^{\circ}$
+		\[
+			c^{2} = a^{2} + b^{2} - 2ab \cos{C}
+		\]
+		\[
+			c^{2} = 5^{2} + 2^{2} - [2(5)(2) \cos{C}]
+		\]
+		\[
+			c^{2} = 14.1371034\ldots
+		\]
+		\[
+			c = 3.7599339\ldots
+		\]
+		Using
+		\[
+			\frac{\sin{A}}{a} = \frac{\sin{B}}{b} = \frac{\sin{C}}{c}  
+		\]
+		\[
+			\rightarrow
+			\frac{\sin{A}}{5}
+			= 
+			\frac{\sin{B}}{2}
+			= 
+			\frac{\sin{42}}{(3.75993\ldots)}
+			=
+			0.177963\ldots
+			% 5.619133\ldots 
+		\]
+		\begin{multicols}{2}
+			\noindent
+			\[
+				A = \sin^{-1}\left( \frac{5\sin{42}}{(3.75993\ldots)} \right)
+			\]
+			\[
+				\cancel{A = 62.85\ldots ^{\circ}}
+				\quad \text{or} \quad
+				{A = 117.1497\ldots ^{\circ}}
+				% A = 62.850255\ldots ^{\circ} 
+				% \quad \text{or} \quad
+				% A = 117.14974\ldots ^{\circ}
+			\]
+			\[
+				B = \sin^{-1}\left( \frac{2\sin{42}}{(3.75993\ldots)} \right)
+			\]
+			\[
+				{B = 20.8502\ldots ^{\circ}}
+				\quad \text{or} \quad
+				\cancel{B = 159.14\ldots ^{\circ}}
+				% B = 20.850255\ldots ^{\circ}
+				% \quad \text{or} \quad
+				% B = 159.14974\ldots ^{\circ}
+			\]
+		\end{multicols}
+		\noindent
+		Using
+		\[ 
+			\text{area} = \frac{1}{2}a \cdot b \sin{C} 
+		\]
+		\[ 
+			\rightarrow \text{area} 
+			= \frac{5\times 2}{2} \sin{42^{\circ}} 
+		\]
+		\[ 
+			\text{area} 
+			= 3.34565303\ldots \; \text{units}^{2}
+		\]
+
+		\qSolMath{
+			c = 3.760 \; \text{(3dp)},
+			\quad
+			A = 117.1 ^{\circ} \; \text{(1dp)},
+			\quad
+			B = 20.9 ^{\circ} \; \text{(1dp)}
+		}{}
+		\qSolMath{
+			\text{area} = 3.346 \; \text{units}^{2}
+		}{
+			(3dp)
+		}
+		
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		%% Part c %%
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\part $c=3$, $A=40^{\circ}$, $B=60^{\circ}$
+		\[
+			C = 180 - (40+60) 
+			= 80^{\circ}
+		\]
+		% Using
+		\[
+			\frac{a}{\sin{A}} 
+			= 
+			\frac{b}{\sin{B}} 
+			=
+			\frac{c}{\sin{C}} 
+		\]
+		\[
+			\rightarrow
+			\frac{a}{\sin{40^{\circ}}} 
+			= 
+			\frac{b}{\sin{60^{\circ}}} 
+			=
+			\frac{3}{\sin{80^{\circ}}} 
+		\]
+		\begin{multicols}{2}
+			\noindent
+			\[
+				a = \sin{(40^{\circ})} \cdot \frac{3}{\sin{(80^{\circ})}}
+			\]
+			\[
+				a = 1.9581109\ldots
+			\]
+			\[
+				b = \sin{(60^{\circ})} \cdot \frac{3}{\sin{(80^{\circ})}}
+			\]
+			\[
+				b = 2.6381557\ldots
+			\]
+		\end{multicols}
+		\noindent
+		\[ 
+			\text{area} = \frac{1}{2}a c \sin{c} 
+		\]
+		\[ 
+			\rightarrow 
+			\text{area} 
+			= 
+			\frac{3}{2} \sin{60^{\circ}} 
+			% \frac{3\sqrt{3}}{4}
+			\cdot
+			\frac{3 \sin{(40^{\circ})}}{\sin{(80^{\circ})}}
+		\]
+		\[ 
+			\text{area} 
+			= 2.5436607\ldots \; \text{units}^{2}
+		\]
+		\qSolMath{
+			C = 80.0 ^{\circ} \; \text{(1dp)},
+			\quad
+			a = 1.958 \; \text{(3dp)},
+			\quad
+			b = 2.638 \; \text{(3dp)}
+		}{}
+		\qSolMath{
+			\text{area} = 2.544 \; \text{units}^{2}
+		}{
+			(3dp)
+		}
+		
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		%% Part d %%
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\part $b=2$, $A=73^{\circ}$, $B=41^{\circ}$
+		\[
+			C = 180 - (73+41) 
+			= 66^{\circ}
+		\]
+		% Using
+		\[
+			\frac{a}{\sin{A}} 
+			= 
+			\frac{b}{\sin{B}} 
+			=
+			\frac{c}{\sin{C}} 
+		\]
+		\[
+			\rightarrow
+			\frac{a}{\sin{73^{\circ}}} 
+			= 
+			\frac{2}{\sin{41^{\circ}}} 
+			=
+			\frac{c}{\sin{66^{\circ}}} 
+		\]
+		\begin{multicols}{2}
+			\noindent
+			\[
+				a = \frac{2 \sin{(73^{\circ})} }{\sin{(41^{\circ})}}
+			\]
+			\[
+				a = 2.91530095\ldots
+			\]
+			\[
+				c = \frac{2 \sin{(66^{\circ})} }{\sin{(41^{\circ})}}
+			\]
+			\[
+				c = 2.78494896\ldots
+			\]
+		\end{multicols}
+		\noindent
+		\[ 
+			\text{area} = \frac{1}{2}b c \sin{A} 
+		\]
+		\[ 
+			\rightarrow 
+			\text{area} 
+			= 
+			\frac{2 \sin{(66^{\circ})} }{\sin{(41^{\circ})}} 
+			\cdot 
+			\sin{73^{\circ}} 
+		\]
+		\[ 
+			\text{area} 
+			= 2.6632599\ldots \; \text{units}^{2}
+		\]
+		\qSolMath{
+			C = 66 ^{\circ} \; \text{(1dp)},
+			\quad
+			a = 2.915 \; \text{(3dp)},
+			\quad
+			c = 2.785 \; \text{(3dp)}
+		}{}
+		\qSolMath{
+			\text{area} = 2.663 \; \text{units}^{2}
+		}{
+			(3dp)
+		}
+		
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		%% Part e %%
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\part $a=5$, $b=3$, $c=4$
+		\begin{multicols}{3}
+			\noindent
+			\begin{align*}
+				% =acos((9+36-25)/(2*3*6))*180/pi
+				\cos{A} 
+					&= \frac{b^{2} + c^{2} - a^{2}}{2bc}
+					\\
+				\cos{A} 
+					&= \frac{3^{2} + 4^{2} - 5^{2}}{2(3)(4)}
+					\\
+				A 
+					&= \cos^{-1} \left( 0 \right)
+					\\
+				A
+					&= 90 ^{\circ}
+			\end{align*}
+			\begin{align*}
+				% =acos(13/15)*180/pi
+				\cos{B} 
+					&= \frac{a^{2} + c^{2} - b^{2}}{2ac}
+					\\
+				\cos{B} 
+					&= \frac{5^{2} + 4^{2} - 3^{2}}{2(5)(4)}
+					\\
+				B 
+					&= \cos^{-1} \left( \frac{9}{20} \right)
+					\\
+				B
+					&= 36.8698976\ldots ^{\circ}
+			\end{align*}
+			\begin{align*}
+				% =acos(-1/15)*180/pi
+				\cos{C} 
+					&= \frac{a^{2} + b^{2} - c^{2}}{2ab}
+					\\
+				\cos{C} 
+					&= \frac{5^{2} + 4^{2} - 3^{2}}{2(5)(4)}
+					\\
+				C 
+					&= \cos^{-1} \left( \frac{3}{5} \right)
+					\\
+				C
+					&= 53.130102\ldots ^{\circ}
+			\end{align*}
+		\end{multicols}
+		\begin{multicols}{2}
+			\noindent
+			\[
+				s = \frac{a+b+c}{2}
+			\]
+			\[
+				s = \frac{12}{2} = 6
+			\]
+			\[
+				\text{area} 
+				= \sqrt{6(6-5)(6-3)(6-4)}
+				= \sqrt{36}
+			\]
+			\[
+				\text{area} = 6 \; \text{units}^{2}
+			\]
+		\end{multicols}
+		\qSolMath{
+			A = 90.0 ^{\circ},
+			\quad
+			B = 36.9 ^{\circ},
+			\quad
+			C = 53.1 ^{\circ}
+		}{
+			(1dp)
+		}
+		\qSolMath{
+			\text{area} = 6.000 \; \text{units}^{2}
+		}{
+			(3dp)
+		}
+
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		%% Part f %%
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\part $c=2$, $b=5$, $B=78^{\circ}$
+		\[
+			\frac{\sin{A}}{a}
+			= 
+			\frac{\sin{B}}{b} 
+			=
+			\frac{\sin{C}}{c}
+		\]
+		\[
+			\rightarrow
+			\frac{\sin{A}}{a} 
+			= 
+			\frac{\sin{78^{\circ}}}{5} 
+			=
+			\frac{\sin{C}}{2} 
+		\]
+		\begin{multicols}{2}
+			\noindent
+			\[
+				\rightarrow
+				\sin{C} = \frac{2\sin{78^{\circ}}}{5} 
+			\]
+			\[
+				\underline{
+					C = 23.0328632\ldots ^{\circ}
+				}
+			\]
+			\[
+				A = 180 - (78+23.0328632\ldots)
+			\]
+			\[	
+				\underline{
+					A = 78.9671367\ldots ^{\circ} 
+				}
+			\]
+		\end{multicols}
+		\noindent
+		\[ 
+			a = \sin{A} \cdot \frac{b}{\sin{B}}
+		\]
+		\[
+			\rightarrow
+			a = \frac{5 \sin{(78.9671367\ldots ^{\circ})} }{\sin{78}}
+		\]
+		\[
+			\underline{
+				a = 5.0172263\ldots
+			}
+		\]
+		\noindent
+		\[ 
+			\text{area} = \frac{1}{2}b c \sin{A} 
+		\]
+		\[ 
+			\rightarrow 
+			\text{area} 
+			= 
+			5 \sin{(78.9671367\ldots ^{\circ})}
+		\]
+		\[ 
+			\underline{
+				\text{area} 
+				= 4.907589789\ldots \; \text{units}^{2}
+			}
+		\]
+		\qSolMath{
+			A = 79.0 ^{\circ} \; \text{(1dp)},
+			\quad
+			C = 23.0 ^{\circ} \; \text{(1dp)},
+			\quad
+			a = 5.017 \; \text{(3dp)}
+		}{}
+		\qSolMath{
+			\text{area} = 4.908 \; \text{units}^{2}
+		}{
+			(3dp)
+		}
+		
+	\end{parts}
+\end{solution}
+
+\setlength{\columnseprule}{0pt}
+
+\appenddata{questionSolutions}{
+{
+\begin{parts}
+	% parts a-c
+	\part Angles (1dp): \newline
+		$A = 56.3 ^{\circ}$, $B = 29.9 ^{\circ}$, $C = 93.8 ^{\circ}$, 
+		\newline
+		Area (3dp): $7.483 \; \text{units}^{2}$
+	\part Side (3dp): $c = 3.760$,
+		\newline
+		Angles (1dp): 
+		\newline
+		\hl{$A = 117.1 ^{\circ}$}, $B = 20.9 ^{\circ}$
+		\newline
+		Area (3dp): $3.346 \; \text{units}^{2}$
+	\part Angles (1dp): $C = 80.0 ^{\circ}$
+		\newline
+		Sides (3dp): $a = 1.958$, $b = 2.638$
+		\newline
+		Area (3dp): $2.544 \; \text{units}^{2}$
+	% parts d-f
+	\part Angles (1dp): $C = 66.0 ^{\circ}$
+		\newline
+		Sides (3dp): $a = 2.915$, $c = 2.785$
+		\newline
+		Area (3dp): $2.663 \; \text{units}^{2}$
+	\part Angles (1dp): \newline
+		$A = 90.0 ^{\circ}$, $B = 36.9 ^{\circ}$, $C = 53.1 ^{\circ}$, 
+		\newline
+		Area (3dp): $6.000 \; \text{units}^{2}$
+	\part Side (3dp): $a = 5.017$,
+		\newline
+		Angles (1dp): $A = 79.0 ^{\circ}$, $C = 23.0 ^{\circ}$
+		\newline
+		Area (3dp): $4.908 \; \text{units}^{2}$
+\end{parts}
+}
+}

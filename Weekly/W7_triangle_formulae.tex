@@ -1,0 +1,84 @@
+\subsection{Triangle formulae} 
+\label{subsec:triangle_formulae}
+
+\ifnum \value{printWorkedSols}=1 
+
+\begin{align}
+	\cos{A} 
+		&= \frac{b^{2} + c^{2} - a^{2}}{2bc} 
+		\\
+	a^{2}
+		&= b^{2} + c^{2} - 2bc \cos{A}
+\end{align}
+\begin{equation}
+	\frac{a}{\sin{A}} 
+	= 
+	\frac{b}{\sin{B}} 
+	=
+	\frac{c}{\sin{C}} 
+\end{equation}
+\begin{align}
+	\text{area}
+		&= \frac{1}{2}a \cdot b \sin{C}
+		\\
+		&= \sqrt{s(s-a)(s-b)(s-c)}
+		\\
+	s
+		&= \frac{a+b+c}{2}
+\end{align}
+
+\fi
+
+BE note: have avoided using separate exercise \& question numbering here 
+(it's needlessly confusing). 
+Instead opted to use continuous question numbering 
+- not separating these questions up into separate `exercises'.
+
+%% CAST Diagram testing %%
+% \import{\qdir}{test_CAST_diagram.tex}
+
+\begin{questions}
+
+\storedata{questionSolutions}{{Tmp Value In Loc 1}}
+\subsubsection{Exercise 1}
+\import{\qdir}{M7_tri_q01.tex}
+\import{\qdir}{M7_tri_q02.tex}
+\newpage
+
+\subsubsection{Exercise 2}
+\import{\qdir}{M7_tri_q03.tex}
+\import{\qdir}{M7_tri_q04.tex}
+\newpage
+
+\subsubsection{Exercise 3}
+\import{\qdir}{M7_tri_q05.tex}
+\import{\qdir}{M7_tri_q06.tex}
+
+\newpage
+\subsubsection{\hl{Exercise 4}}
+\import{\qdir}{M7_tri_q07.tex}
+
+\ifnum\value{printSols}>0
+	\newpage
+	\subsubsection*{Numerical solutions}
+	\setcounter{solNo}{2}
+	\begin{enumerate}
+		% \subsubsection*{Exercise 1}
+		\item \printSolutionAndInc{} %Q1
+		\item \printSolutionAndInc{} %Q2
+		% \subsubsection*{Exercise 2}
+		\item \printSolutionAndInc{} %Q3
+		\item \printSolutionAndInc{} %Q4
+		% \subsubsection*{Exercise 3}
+		\begin{multicols}{2}
+			\item \printSolutionAndInc{} %Q5
+			\item \printSolutionAndInc{} %Q6
+		\end{multicols}
+		\begin{multicols}{2}
+			\item \printSolutionAndInc{} %Q7
+		\end{multicols}
+	\end{enumerate}
+	\else
+\fi
+
+\end{questions}
