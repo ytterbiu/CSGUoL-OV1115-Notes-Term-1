@@ -1,0 +1,64 @@
+%% Specimen Paper 1 %%
+% Question 7
+\question The time period, $T$, of a simple pendulum of length, $L$, 
+is related to the acceleration of free fall, $g$, by the formula:
+\[
+	T = 2\pi \sqrt{\frac{L}{g}}
+\]
+\begin{parts}
+	\part Calculate $T$ when $L=10$ and $\pi=3.14$ and $g=9.8$. 
+		(Your answer should be to 1 decimal place but does not require units)
+	\part Rearrange the formula to make $L$ the subject.
+\end{parts}
+\begin{solution}
+	\begin{parts}
+		\part %part a
+			\[
+				T = 2\pi \sqrt{\frac{L}{g}}
+			\]
+			\[
+				\rightarrow
+				T = 2(3.14) \sqrt{\frac{10}{9.8}}
+			\]
+			\[
+				T = 6.34375797\ldots
+			\]
+			\qSolMath{
+				T = 6.3
+			}{
+				(1dp)
+			}
+		\part %part b
+			\noindent
+			\begin{align*}
+				T 
+					&= 2\pi \sqrt{\frac{L}{g}}
+					\\
+				\sqrt{\frac{L}{g}} 
+					&= \frac{T}{2\pi}
+					\\
+				\frac{L}{g} 
+					&= \left( \frac{T}{2\pi} \right)^{2}
+			\end{align*}
+			\qSolMath{
+				L = g \left( \frac{T}{2\pi} \right)^{2}
+			}{}
+			or
+			\[
+				L = \frac{g T^{2}}{4\pi^{2}}
+			\]
+	\end{parts}
+\end{solution}
+
+\appenddata{questionSolutions}{
+{
+\begin{parts}
+	\part $T = 6.3$ (1dp)
+	\part $L = g \left( \dfrac{T}{2\pi} \right)^{2}$ 
+		\newline 
+		or 
+		\newline
+		$L = \dfrac{g T^{2}}{4\pi^{2}}$
+\end{parts}
+}
+}
