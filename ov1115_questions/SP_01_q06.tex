@@ -9,57 +9,78 @@ your choice
 	a + 2b = 7
 \]
 \begin{solution}
-	\[
-		3a + 4b = 13 
-		\quad (1)
-	\]
-	\[
-		a + 2b = 7 
-		\quad (2)
-	\]
-	\[
-		\rightarrow
-		a = 7-2b
-		\quad (3)
-	\]
-	Sub (3) into (1)
+	\begin{align}
+		3a + 4b 		
+			&= 13 
+			\label{eq:SP_01_q06_eq1} \\
+		a + 2b			
+			&= 7 
+			\label{eq:SP_01_q06_eq2} \\
+		\rightarrow a 	
+			&= 7-2b
+			\label{eq:SP_01_q06_eq3}
+	\end{align}
+	Sub (\ref{eq:SP_01_q06_eq3}) into (\ref{eq:SP_01_q06_eq1})
 	\noindent
-	\begin{align*}
+	\begin{align}
 		3a + 4b 
 			&= 13 
-			\quad (1)
+			\nonumber \tag{\ref{eq:SP_01_q06_eq1}}
 			\\
 		\rightarrow 
 		3(7-2b) + 4b 
 			&= 13 
+			\nonumber
 			\\
 		21 - 6b + 4b 
 			&= 13 
+			\nonumber
 			\\
 		21 - 13 
 			&= 2b
+			\nonumber
 			\\
 		8
 			&= 2b
+			\nonumber
 			\\
 		b
 			&= 4 
-			\quad (4)
+			\label{eq:SP_01_q06_eq4}
+	\end{align}
+	Sub (\ref{eq:SP_01_q06_eq4}) into (\ref{eq:SP_01_q06_eq2})
+	\begin{align*}
+		a + 2b			
+			&= 7 
+			\tag{\ref{eq:SP_01_q06_eq2}} \\
+		\rightarrow
+		a + 2(4) 
+			&= 7
+			\\
+		a 
+			&= -1
 	\end{align*}
-	Sub (4) into (2)
-	\[
-		a + 2(4) = 7
+	\[ 
+		\underline{
+			a = -1, \quad b = 4
+		}
 	\]
+	Check $a$ and $b$ values in (\ref{eq:SP_01_q06_eq1})
 	\[
-		a = -1
+		3a + 4b = 13 
+		\tag{\ref{eq:SP_01_q06_eq1}}
 	\]
-	Check in (1), LHS:
-	\[
-		3(-1) + 4(4)
-	\]
-	\[
-		-3 + 16 = 13 = \text{RHS}
-	\]
+	\begin{align*}
+		\rightarrow 
+		\text{LHS} 
+			&= 3(-1) + 4(4)
+			\\
+			&= -3 + 16
+			\\
+			&= 13
+			\\
+			&= \text{RHS}
+	\end{align*}
 	\qSolMath{
 		b = 4,
 		\quad 
